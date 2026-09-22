@@ -39,7 +39,7 @@ class Vidu1SecurityIntegrationTest {
 
     @Test
     void studentCanLoginAndOpenPrivatePage() throws Exception {
-        MvcResult login = mvc.perform(formLogin("/login")
+        MvcResult login = mvc.perform(formLogin("/vidu1/login")
                         .user("student")
                         .password("123456"))
                 .andExpect(authenticated().withUsername("student"))
@@ -52,14 +52,14 @@ class Vidu1SecurityIntegrationTest {
 
     @Test
     void logoutInvalidatesTheAuthenticatedSession() throws Exception {
-        MvcResult login = mvc.perform(formLogin("/login")
+        MvcResult login = mvc.perform(formLogin("/vidu1/login")
                         .user("student")
                         .password("123456"))
                 .andExpect(authenticated().withUsername("student"))
                 .andReturn();
         MockHttpSession session = (MockHttpSession) login.getRequest().getSession();
 
-        mvc.perform(post("/logout").with(csrf()).session(session))
+        mvc.perform(post("/vidu1/logout").with(csrf()).session(session))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/vidu1"));
 

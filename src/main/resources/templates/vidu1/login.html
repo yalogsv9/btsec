@@ -13,7 +13,7 @@
     <p>Hãy đăng nhập để vào khu vực bảo vệ.</p>
     <p class="alert" th:if="${param.error}" role="alert">Tên đăng nhập hoặc mật khẩu không đúng.</p>
     <p class="notice" th:if="${param.logout}">Bạn đã đăng xuất thành công.</p>
-    <form th:action="@{/login}" method="post">
+    <form th:action="@{/vidu1/login}" method="post">
         <label for="username">Tên đăng nhập</label>
         <input id="username" name="username" required autofocus>
         <label for="password">Mật khẩu</label>

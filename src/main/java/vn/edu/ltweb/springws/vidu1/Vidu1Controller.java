@@ -20,7 +20,7 @@ public class Vidu1Controller {
         return "vidu1/private";
     }
 
-    @GetMapping("/login")
+    @GetMapping("/vidu1/login")
     String login() {
         return "vidu1/login";
     }
