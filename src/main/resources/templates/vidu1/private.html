@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khu vực bảo vệ - Ví dụ 1</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Đã xác thực</p>
+    <h1>Khu vực bảo vệ</h1>
+    <p>Xin chào, <strong th:text="${username}">student</strong>. Bạn chỉ nhìn thấy trang này sau khi đăng nhập.</p>
+    <form th:action="@{/logout}" method="post">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+        <button type="submit">Đăng xuất</button>
+    </form>
+</main>
+</body>
+</html>

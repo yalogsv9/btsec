@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="vi" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ 1 - Spring Security 6</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Spring Security 6</p>
+    <h1>Ví dụ 1: Form Login</h1>
+    <p>Trang này được phép truy cập công khai.</p>
+    <a class="button" th:href="@{/vidu1/private}">Vào khu vực bảo vệ</a>
+    <p class="hint">Tài khoản mẫu: <code>student</code> / <code>123456</code></p>
+</main>
+</body>
+</html>

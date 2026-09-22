@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="vi" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Ví dụ 1</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main class="card narrow">
+    <p class="eyebrow">Ví dụ 1</p>
+    <h1>Đăng nhập</h1>
+    <p>Hãy đăng nhập để vào khu vực bảo vệ.</p>
+    <p class="alert" th:if="${param.error}" role="alert">Tên đăng nhập hoặc mật khẩu không đúng.</p>
+    <p class="notice" th:if="${param.logout}">Bạn đã đăng xuất thành công.</p>
+    <form th:action="@{/login}" method="post">
+        <label for="username">Tên đăng nhập</label>
+        <input id="username" name="username" required autofocus>
+        <label for="password">Mật khẩu</label>
+        <input id="password" type="password" name="password" required>
+        <button type="submit">Đăng nhập</button>
+    </form>
+    <a class="back" th:href="@{/vidu1}">← Quay lại trang chủ</a>
+</main>
+</body>
+</html>
