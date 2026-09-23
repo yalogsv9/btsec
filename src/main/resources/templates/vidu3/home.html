@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ví dụ 3</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main class="card">
+    <p class="eyebrow">Remember me</p>
+    <h1>Trang chủ Vidu3</h1>
+    <p>Xin chào, <strong th:text="${username}">rememberme</strong>.</p>
+    <p>Cookie remember-me có hiệu lực trong 7 ngày khi bạn chọn “Ghi nhớ tôi”.</p>
+    <form th:action="@{/vidu3/logout}" method="post">
+        <button type="submit">Đăng xuất</button>
+    </form>
+</main>
+</body>
+</html>

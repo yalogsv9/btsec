@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="vi" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng nhập ví dụ 3</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+</head>
+<body>
+<main class="card narrow">
+    <p class="eyebrow">Ví dụ 3 · Remember me</p>
+    <h1>Đăng nhập</h1>
+    <p class="alert" th:if="${param.error}" role="alert">Username hoặc mật khẩu không đúng.</p>
+    <p class="notice" th:if="${param.logout}">Bạn đã đăng xuất.</p>
+    <form th:action="@{/vidu3/login}" method="post">
+        <label for="username">Username</label>
+        <input id="username" name="username" required autofocus>
+        <label for="password">Mật khẩu</label>
+        <input id="password" name="password" type="password" required>
+        <label><input name="remember-me" type="checkbox"> Ghi nhớ tôi trong 7 ngày</label>
+        <button type="submit">Đăng nhập</button>
+    </form>
+    <p class="hint">rememberme / 123456</p>
+</main>
+</body>
+</html>
